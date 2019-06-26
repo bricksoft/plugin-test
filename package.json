@@ -1,0 +1,13 @@
+{
+  "name": "testplugin",
+  "main": "index.js",
+  "version": "1.0.0",
+  "meta": {
+    "contributes": [
+      "test"
+    ]
+  },
+  "dependencies": {
+    "@jabuco/use-loader": "^1.0.2"
+  }
+}

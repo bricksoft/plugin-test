@@ -8,14 +8,14 @@ require("@jabuco/use-loader")({
   meta,
   // initialization hook (optional)
   load(options) {
-    console.log("[testplugin] initializing plugin %s", name);
-    console.log("[testplugin] args: ", options);
-    console.log("[testplugin] api: ", this);
+    console.log("[plugin-test] initializing plugin %s", name);
+    console.log("[plugin-test] args: ", options);
+    console.log("[plugin-test] api: ", this);
     // do setup work here ...
   },
   // unload hook (optional)
   unload: (...args) => {
-    console.log("[testplugin] unloading plugin %s", name);
+    console.log("[plugin-test] unloading plugin %s", name);
     // do tidy up work here ...
   },
 
@@ -23,8 +23,8 @@ require("@jabuco/use-loader")({
   test(...args) {
     // this: manager.api & plugin api
     console.log(
-      "[testplugin] running api endpoint 'api.contributed.testplugin.test'"
+      "[plugin-test] running api endpoint 'api.contributed.testplugin.test'"
     );
-    console.log("[testplugin]", this.api.unloadPlugin("testplugin"));
+    console.log("[plugin-test]", this.api.unloadPlugin("plugin-test"));
   }
 });

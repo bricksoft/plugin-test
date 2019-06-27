@@ -1,5 +1,5 @@
 {
-  "name": "testplugin",
+  "name": "plugin-test",
   "main": "index.js",
   "version": "1.0.0",
   "meta": {
